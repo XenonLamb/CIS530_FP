@@ -169,18 +169,18 @@ Dev set accuracy: 0.5348 (BERTBase implementation by University College London: 
 
 ### Adversarial Filtering
 
-*`get_candsents.py` extracts the collection of choices from train set.
-*`get_cor_ids.py` finds the indices of correct predictions in dev set.
-*`swag_ensemble_filter.py` performs adversarial filtering using the ensemble model.
+- `get_candsents.py` extracts the collection of choices from train set.
+- `get_cor_ids.py` finds the indices of correct predictions in dev set.
+- `swag_ensemble_filter.py` performs adversarial filtering using the ensemble model.
     usage: `python swag_ensemble_filter.py --do_lower_case >filtered_pairs.txt`
 
 #### In `\swag_bert_skpt` folder:
-*`all_cands.txt` contains the collection of choices extracted from train set.
-*`cor_ids.txt` contains indices of all the correct predictions made by the ensemble model on dev set.
-*`filtered_pairs.txt` contains the extraction result of potential substitutions, which is in the form of
+- `all_cands.txt` contains the collection of choices extracted from train set.
+- `cor_ids.txt` contains indices of all the correct predictions made by the ensemble model on dev set.
+- `filtered_pairs.txt` contains the extraction result of potential substitutions, which is in the form of
     `index in cor_ids.txt` , `index in dev set`, `context sentence` , `start of ending` , `correct answer` , `potential substitution`.
-*`collect_stats.py` shows the number of substitutions, average number of substitutions per sample, and the ratio of samples with at least one substitution.
+- `collect_stats.py` shows the number of substitutions, average number of substitutions per sample, and the ratio of samples with at least one substitution.
 
 #### Result
-* BERT Baseline accuracy: 0.3388
+-  BERT Baseline accuracy: 0.3388
 
